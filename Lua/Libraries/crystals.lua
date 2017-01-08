@@ -10,4 +10,8 @@ function Crystal:New()
   return obj
 end
 
+function Crystal:SetSprite(spritename)
+  self.sprite = spritename
+end
 
+ShadowCrystal = {}

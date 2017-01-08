@@ -30,10 +30,11 @@ end
 function EncounterStarting()
   require('Libraries/crystals')
   require('Libraries/enemysprites')
-  local number_of_crystals = 21
+  local number_of_crystals = 20
   crystals = {}
   for i=1, number_of_crystals do
     local crystal = Crystal:New()
+    crystal:SetSprite('crystal_'..i)
     table.insert(crystals, crystal)
   end
 
