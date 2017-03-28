@@ -26,7 +26,7 @@ dweapon.SetParent(dtorso)
 darm1.SetParent(dtorso)
 darm2.SetParent(darm1)
 
-dlegs.y = 240
+dlegs.y = 300
 
 dweapon.SetPivot(weapon_pivot_x, weapon_pivot_y)
 dweapon.SetAnchor(weapon_anchor_x, weapon_anchor_y)
@@ -53,6 +53,9 @@ dlegs.SetPivot(0.5, 0)
 --Finally, we do some frame-by-frame animation just to show off the feature. You put in a list of sprites,
 --and the time you want a sprite change to take. In this case, it's 1/2 of a second.
 
+function MoveTop()
+  dlegs.y = 300
+end
 
 function RotateGun(deg)
   dweapon.rotation = deg

@@ -3,9 +3,9 @@
 music = "Dingodile_Crash_Bandicoot" --Always OGG. Extension is added automatically. Remove the first two lines for custom music.
 encountertext = "Poseur strikes a pose!" --Modify as necessary. It will only be read out in the action select screen.
 nextwaves = {"bullettest_chaserorb"}
-wavetimer = 10.0
+wavetimer = 20.0
 --arenasize = {155, 130}
-arenasize = {512, 150}
+arenasize = {512, 200}
 
 enemies = {
 "Dingodile"
@@ -34,7 +34,8 @@ function EncounterStarting()
   crystals = {}
   for i=1, number_of_crystals do
     local crystal = Crystal:New()
-    crystal:SetSprite('crystal_'..i)
+    --crystal:SetSprite('crystal_'..i)
+    crystal.id = i
     table.insert(crystals, crystal)
   end
 
